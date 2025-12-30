@@ -13,25 +13,149 @@
         .bg-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 25, 35, 0.95); z-index: -1; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; min-height: 100vh; border-left: 1px solid #333; border-right: 1px solid #333; position: relative; }
         h1 { color: #ff4655; text-transform: uppercase; text-align: center; border-bottom: 2px solid #ff4655; padding-bottom: 20px; letter-spacing: 2px; font-size: 1.4rem; font-style: italic; }
-        
         .input-group { background: #1f2731; padding: 20px; border: 1px solid #ece8e1; margin-bottom: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
         .select-row { display: flex; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
         input, textarea, select { width: 100%; padding: 12px; background: #0f1923; border: 1px solid #555; color: #ece8e1; box-sizing: border-box; margin-bottom: 10px; font-size: 0.9rem; }
         select { color: #ff4655; font-weight: bold; }
-        
         button { width: 100%; background: #ff4655; color: #ece8e1; padding: 15px; border: none; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
         button:hover { background: #ff5e6d; }
         .file-upload-btn { display: block; width: 100%; text-align: center; background: #333; color: #8b9bb4; padding: 10px; border: 1px dashed #555; cursor: pointer; margin-bottom: 10px; font-size: 0.9rem; }
         .file-upload-btn:hover { color: #ece8e1; border-color: #ff4655; }
-        
         .recruit-switch { display: flex; align-items: center; margin-bottom: 15px; background: #0f1923; padding: 10px; border: 1px solid #555; }
         .recruit-switch input { width: auto; margin-right: 10px; }
         .recruit-label { color: #26ff95; font-weight: bold; }
         .recruit-options { display: none; margin-bottom: 15px; border: 1px dashed #26ff95; padding: 10px; }
-
         .link-area { display: flex; justify-content: center; margin-bottom: 20px; gap: 10px; }
         .official-link { text-decoration: none; color: #8b9bb4; font-size: 0.8rem; border: 1px solid #8b9bb4; padding: 5px 10px; transition: 0.3s; }
-
         .post { background: #1f2731; padding: 15px; margin-bottom: 15px; border-left: 4px solid #ff4655; position: relative; }
         .post.recruiting { border-left: 4px solid #26ff95; border: 1px solid #26ff95; box-shadow: 0 0 10px rgba(38, 255, 149, 0.2); }
-        .recruit-badge { background: #26ff95; color: #0f1923; font-size: 0.7rem; font-weight: bold; padding: 2px 6px; border-radius:
+        .recruit-badge { background: #26ff95; color: #0f1923; font-size: 0.7rem; font-weight: bold; padding: 2px 6px; border-radius: 4px; margin-left: 10px; vertical-align: middle; }
+        .post-header { display: flex; align-items: center; margin-bottom: 10px; }
+        .icon-stack { position: relative; width: 60px; height: 60px; margin-right: 15px; }
+        .rank-icon { width: 45px; height: 45px; position: absolute; top: 0; left: 0; z-index: 1; filter: drop-shadow(0 0 2px #000); }
+        .agent-icon { width: 30px; height: 30px; position: absolute; bottom: 0; right: 0; z-index: 2; border: 2px solid #ff4655; border-radius: 50%; background: #0f1923; }
+        .role-icon { width: 20px; height: 20px; position: absolute; top: 0; right: 0; z-index: 3; filter: brightness(0.8); }
+        .post-name { color: #ff4655; font-weight: bold; font-size: 1.2em; font-style: italic; }
+        .riot-id-area { margin-top: 5px; font-family: monospace; display: flex; align-items: center; gap: 10px; }
+        .riot-id-text { color: #26ff95; font-size: 0.9em; }
+        .copy-btn { background: #26ff95; color: #0f1923; border: none; padding: 2px 8px; font-size: 0.7rem; cursor: pointer; font-weight: bold; border-radius: 3px; width: auto; letter-spacing: 0; text-transform: none; }
+        .copy-btn:active { background: #fff; }
+        .recruit-tags { margin-top: 5px; font-size: 0.8em; }
+        .tag { background: #333; color: #ece8e1; padding: 2px 6px; border-radius: 3px; margin-right: 5px; border: 1px solid #555; }
+        .tag.vc { border-color: #00fff2; color: #00fff2; }
+        .tag.style { border-color: #ffaa00; color: #ffaa00; }
+        .post-time { font-size: 0.7em; color: #8b9bb4; display: block; margin-top: 2px; }
+        .post-message { font-size: 1rem; line-height: 1.5; white-space: pre-wrap; margin-top: 10px; color: #ece8e1; }
+        .post-image { max-width: 100%; border-radius: 4px; margin-top: 10px; border: 1px solid #555; }
+        .ad-container { display: flex; justify-content: center; margin: 20px 0; max-width: 100%; overflow-x: auto; }
+        .rakuten-ad { background-color: white; border-radius: 12px; padding: 5px; }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <h1 id="ui-title">VALORANT STRONGEST SOLO PLAYER</h1>
+        <div class="ad-container">
+            <div class="rakuten-ad">
+                <table border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #95a5a6;border-radius:.75rem;background-color:#FFFFFF;width:504px;margin:0px;padding:5px;text-align:center;overflow:hidden;"><table><tr><td style="width:240px"><a href="https://hb.afl.rakuten.co.jp/ichiba/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogicool%2Fg304%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?me_id=1386625&item_id=10000191&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flogicool%2Fcabinet%2Fprd%2Fg_mice%2Fg304%2Fg304_01_r_1.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="" title=""></a></td><td style="vertical-align:top;width:248px;display: block;"><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="https://hb.afl.rakuten.co.jp/ichiba/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogicool%2Fg304%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;">Logicool G ゲーミングマウス 無線 G304</a><br><span>価格：5,200円</span></p><div style="margin:10px;"><a href="https://hb.afl.rakuten.co.jp/ichiba/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogicool%2Fg304%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener"><img src="https://static.affiliate.rakuten.co.jp/makelink/rl.svg" style="float:left;max-height:27px;width:auto;"></a><a href="https://hb.afl.rakuten.co.jp/ichiba/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogicool%2Fg304%2F%3Fscid%3Daf_pc_bbtn" target="_blank" rel="nofollow sponsored noopener"><div style="float:right;width:41%;height:27px;background-color:#bf0000;color:#fff!important;font-size:12px;line-height:27px;border-radius:16px;text-align:center;"> 楽天で購入 </div></a></div></td></tr></table></div></td></tr></table>
+            </div>
+        </div>
+        <div class="link-area">
+            <a href="https://playvalorant.com/ja-jp/news/" target="_blank" class="official-link">OFFICIAL NEWS</a>
+            <a href="https://playvalorant.com/ja-jp/news/tags/patch-notes/" target="_blank" class="official-link">PATCH NOTES</a>
+        </div>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <div class="select-row">
+                    <select name="rank" id="rank-select">{% for rank_name in ranks %}<option value="{{ rank_name }}">{{ rank_name }}</option>{% endfor %}</select>
+                    <select name="agent" id="agent-select"><option value="">AGENT SELECT</option>{% for agent_name in agents %}<option value="{{ agent_name }}">{{ agent_name }}</option>{% endfor %}</select>
+                </div>
+                <input type="text" name="name" id="ui-name" placeholder="AGENT NAME" required>
+                <div class="recruit-switch">
+                    <input type="checkbox" name="recruit" id="recruit-check" onchange="toggleRecruit()">
+                    <label for="recruit-check" class="recruit-label">INVITE TO PARTY? // パーティ募集する</label>
+                </div>
+                <div class="recruit-options" id="recruit-area">
+                    <div class="select-row">
+                        <select name="vc_type">{% for vc in vc_options %}<option value="{{ vc }}">{{ vc }}</option>{% endfor %}</select>
+                        <select name="play_style">{% for style in play_styles %}<option value="{{ style }}">{{ style }}</option>{% endfor %}</select>
+                    </div>
+                    <input type="text" name="riot_id" placeholder="RIOT ID (例: Name#1234)" style="border-color: #26ff95;">
+                </div>
+                <textarea name="message" id="ui-msg" rows="3" placeholder="MISSION REPORT..." required></textarea>
+                <label class="file-upload-btn">📸 画像 / IMAGE <input type="file" name="image" accept="image/*" style="display:none;"></label>
+                <button type="submit" id="ui-btn">DEPLOY REPORT</button>
+            </div>
+        </form>
+        {% for post in posts %}
+        <div class="post {% if post.is_recruit %}recruiting{% endif %}">
+            <div class="post-header">
+                <div class="icon-stack">
+                    <img src="{{ post.rank_url }}" class="rank-icon">
+                    {% if post.role_url %}<img src="{{ post.role_url }}" class="role-icon">{% endif %}
+                    {% if post.agent_url %}<img src="{{ post.agent_url }}" class="agent-icon">{% endif %}
+                </div>
+                <div class="post-info">
+                    <span class="post-name">{{ post.name }}</span>
+                    {% if post.is_recruit %}<span class="recruit-badge">WANTED</span>{% endif %}
+                    {% if post.is_recruit %}
+                        <div class="recruit-tags">
+                            {% if post.vc_type %}<span class="tag vc">{{ post.vc_type }}</span>{% endif %}
+                            {% if post.play_style %}<span class="tag style">{{ post.play_style }}</span>{% endif %}
+                        </div>
+                        {% if post.riot_id %}
+                        <div class="riot-id-area">
+                            <span class="riot-id-text">{{ post.riot_id }}</span>
+                            <button class="copy-btn" onclick="copyToClipboard('{{ post.riot_id }}')">COPY ID</button>
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                    <span class="post-time">// {{ post.time }}</span>
+                </div>
+            </div>
+            <div class="post-message">{{ post.message }}</div>
+            {% if post.image_filename %}
+            <img src="{{ url_for('static', filename='uploads/' + post.image_filename) }}" class="post-image">
+            {% endif %}
+        </div>
+        {% endfor %}
+        <p style="font-size: 0.6rem; color: #555; text-align: center; margin-top: 50px;">※当サイトは楽天アフィリエイトプログラムに参加しています。</p>
+    </div>
+    <script>
+        const jaText = {
+            title: "ヴァロラント最強ソロプレイヤー",
+            agents: {"Astra": "アストラ", "Breach": "ブリーチ", "Brimstone": "ブリムストーン", "Chamber": "チェンバー", "Clove": "クローヴ", "Cypher": "サイファー", "Deadlock": "デッドロック", "Fade": "フェイド", "Gekko": "ゲッコー", "Harbor": "ハーバー", "Iso": "アイソ", "Jett": "ジェット", "KAY/O": "KAY/O", "Killjoy": "キルジョイ", "Neon": "ネオン", "Omen": "オーメン", "Phoenix": "フェニックス", "Raze": "レイズ", "Reyna": "レイナ", "Sage": "セージ", "Skye": "スカイ", "Sova": "ソーヴァ", "Viper": "ヴァイパー", "Vyse": "ヴィトー (VYSE)", "Yoru": "ヨル"},
+            ranks: {"Unranked": "アンランク", "Iron": "アイアン", "Bronze": "ブロンズ", "Silver": "シルバー", "Gold": "ゴールド", "Platinum": "プラチナ", "Diamond": "ダイアモンド", "Ascendant": "アセンダント", "Immortal": "イモータル", "Radiant": "レディアント"}
+        };
+        const userLang = navigator.language || navigator.userLanguage; 
+        if (userLang.startsWith('ja')) {
+            document.getElementById('ui-title').innerText = jaText.title;
+            document.getElementById('ui-name').placeholder = "名前を入力...";
+            document.getElementById('ui-msg').placeholder = "戦況報告...";
+            document.getElementById('ui-btn').innerText = "報告を送信";
+            const rSelect = document.getElementById('rank-select');
+            for (let i = 0; i < rSelect.options.length; i++) {
+                const val = rSelect.options[i].value;
+                if (jaText.ranks[val]) rSelect.options[i].text = jaText.ranks[val];
+            }
+            const aSelect = document.getElementById('agent-select');
+            for (let i = 0; i < aSelect.options.length; i++) {
+                const val = aSelect.options[i].value;
+                if (jaText.agents[val]) aSelect.options[i].text = jaText.agents[val];
+            }
+        }
+        function toggleRecruit() {
+            const checkBox = document.getElementById("recruit-check");
+            const area = document.getElementById("recruit-area");
+            area.style.display = checkBox.checked ? "block" : "none";
+        }
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert("IDをコピーしました: " + text);
+            }, function(err) {
+                console.error('コピー失敗: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
