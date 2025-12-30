@@ -27,4 +27,75 @@
         .recruit-switch { display: flex; align-items: center; margin-bottom: 15px; background: #0f1923; padding: 10px; border: 1px solid #555; }
         .recruit-switch input { width: auto; margin-right: 10px; }
         .recruit-label { color: #26ff95; font-weight: bold; }
-        .recruit-options { display: none; margin-bottom: 15px; border: 1
+        .recruit-options { display: none; margin-bottom: 15px; border: 1px dashed #26ff95; padding: 10px; }
+
+        .link-area { display: flex; justify-content: center; margin-bottom: 20px; gap: 10px; }
+        .official-link { text-decoration: none; color: #8b9bb4; font-size: 0.8rem; border: 1px solid #8b9bb4; padding: 5px 10px; transition: 0.3s; }
+
+        .post { background: #1f2731; padding: 15px; margin-bottom: 15px; border-left: 4px solid #ff4655; position: relative; }
+        .post.recruiting { border-left: 4px solid #26ff95; border: 1px solid #26ff95; box-shadow: 0 0 10px rgba(38, 255, 149, 0.2); }
+        .recruit-badge { background: #26ff95; color: #0f1923; font-size: 0.7rem; font-weight: bold; padding: 2px 6px; border-radius: 4px; margin-left: 10px; vertical-align: middle; }
+
+        .post-header { display: flex; align-items: center; margin-bottom: 10px; }
+        .icon-stack { position: relative; width: 60px; height: 60px; margin-right: 15px; }
+        .rank-icon { width: 45px; height: 45px; position: absolute; top: 0; left: 0; z-index: 1; filter: drop-shadow(0 0 2px #000); }
+        .agent-icon { width: 30px; height: 30px; position: absolute; bottom: 0; right: 0; z-index: 2; border: 2px solid #ff4655; border-radius: 50%; background: #0f1923; }
+        .role-icon { width: 20px; height: 20px; position: absolute; top: 0; right: 0; z-index: 3; filter: brightness(0.8); }
+        .post-name { color: #ff4655; font-weight: bold; font-size: 1.2em; font-style: italic; }
+        
+        .riot-id-area { margin-top: 5px; font-family: monospace; display: flex; align-items: center; gap: 10px; }
+        .riot-id-text { color: #26ff95; font-size: 0.9em; }
+        .copy-btn { 
+            background: #26ff95; color: #0f1923; border: none; padding: 2px 8px; 
+            font-size: 0.7rem; cursor: pointer; font-weight: bold; border-radius: 3px; 
+            width: auto; letter-spacing: 0; text-transform: none;
+        }
+        .copy-btn:active { background: #fff; }
+
+        .recruit-tags { margin-top: 5px; font-size: 0.8em; }
+        .tag { background: #333; color: #ece8e1; padding: 2px 6px; border-radius: 3px; margin-right: 5px; border: 1px solid #555; }
+        .tag.vc { border-color: #00fff2; color: #00fff2; }
+        .tag.style { border-color: #ffaa00; color: #ffaa00; }
+
+        .post-time { font-size: 0.7em; color: #8b9bb4; display: block; margin-top: 2px; }
+        .post-message { font-size: 1rem; line-height: 1.5; white-space: pre-wrap; margin-top: 10px; color: #ece8e1; }
+        .post-image { max-width: 100%; border-radius: 4px; margin-top: 10px; border: 1px solid #555; }
+
+        .ad-container { display: flex; justify-content: center; margin: 20px 0; max-width: 100%; overflow-x: auto; }
+        .rakuten-ad { background-color: white; border-radius: 12px; padding: 5px; }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <h1 id="ui-title">VALORANT STRONGEST SOLO PLAYER</h1>
+        
+        <div class="ad-container">
+            <div class="rakuten-ad">
+                <table border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #95a5a6;border-radius:.75rem;background-color:#FFFFFF;width:504px;margin:0px;padding:5px;text-align:center;overflow:hidden;"><table><tr><td style="width:240px"><a href="https://hb.afl.rakuten.co.jp/ichiba/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogicool%2Fg304%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?me_id=1386625&item_id=10000191&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flogicool%2Fcabinet%2Fprd%2Fg_mice%2Fg304%2Fg304_01_r_1.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="" title=""></a></td><td style="vertical-align:top;width:248px;display: block;"><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="https://hb.afl.rakuten.co.jp/ichiba/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogicool%2Fg304%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;">Logicool G ゲーミングマウス 無線 G304</a><br><span>価格：5,200円</span></p><div style="margin:10px;"><a href="https://hb.afl.rakuten.co.jp/ichiba/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogicool%2Fg304%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener"><img src="https://static.affiliate.rakuten.co.jp/makelink/rl.svg" style="float:left;max-height:27px;width:auto;"></a><a href="https://hb.afl.rakuten.co.jp/ichiba/4f9e13cd.c3d81642.4f9e13cf.7f3f22cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogicool%2Fg304%2F%3Fscid%3Daf_pc_bbtn" target="_blank" rel="nofollow sponsored noopener"><div style="float:right;width:41%;height:27px;background-color:#bf0000;color:#fff!important;font-size:12px;line-height:27px;border-radius:16px;text-align:center;"> 楽天で購入 </div></a></div></td></tr></table></div></td></tr></table>
+            </div>
+        </div>
+
+        <div class="link-area">
+            <a href="https://playvalorant.com/ja-jp/news/" target="_blank" class="official-link">OFFICIAL NEWS</a>
+            <a href="https://playvalorant.com/ja-jp/news/tags/patch-notes/" target="_blank" class="official-link">PATCH NOTES</a>
+        </div>
+
+        <form method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <div class="select-row">
+                    <select name="rank" id="rank-select">{% for rank_name in ranks %}<option value="{{ rank_name }}">{{ rank_name }}</option>{% endfor %}</select>
+                    <select name="agent" id="agent-select"><option value="">AGENT SELECT</option>{% for agent_name in agents %}<option value="{{ agent_name }}">{{ agent_name }}</option>{% endfor %}</select>
+                </div>
+                
+                <input type="text" name="name" id="ui-name" placeholder="AGENT NAME" required>
+                
+                <div class="recruit-switch">
+                    <input type="checkbox" name="recruit" id="recruit-check" onchange="toggleRecruit()">
+                    <label for="recruit-check" class="recruit-label">INVITE TO PARTY? // パーティ募集する</label>
+                </div>
+                
+                <div class="recruit-options" id="recruit-area">
+                    <div class="select-row">
+                        <select name="vc_type">
+                            {% for vc in vc_s
